@@ -1,0 +1,22 @@
+      <Header style={{ backgroundColor: "white" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            {t("home.idioma")}{" "}
+            {/* esto representa la key para la transition, basicamente se pone esto para que segun el idioma cambie*/}
+          </div>
+          <div>
+            <Button onClick={() => i18n.changeLanguage("es")}>ES</Button>
+            <Button onClick={() => i18n.changeLanguage("en")}>EN</Button>
+            <Button onClick={() => i18n.changeLanguage("pr")}>PR</Button>
+
+            {/* <Button>{t('home.cambiar.idioma.en')}</Button>
+            <Button>{t('home.cambiar.idioma.pr')}</Button> */}
+          </div>
+        </div>
+      </Header>

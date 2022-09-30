@@ -1,0 +1,33 @@
+// import i18n from "i18next";
+// import { initReactI18next } from "react-i18next";
+// import enTranslation from './en.json';
+// import esTranslation from './es.json';
+// import prTranslation from './pr.json';
+
+
+// const resources = {
+//     en: {
+//         translation:enTranslation,
+//     },
+//     es: {
+//         translation:esTranslation,
+//     },
+//     pr: {
+//         translation:prTranslation,
+//     },
+// };
+
+// //iniciar libreria, investigar otras opciones de i18n, ya que tambien cuenta con interpolación y localización (ver, intereante)
+
+// i18n
+//     .use(initReactI18next) //dependecia para hacerle saber a i18n inicia con react
+//     .init({
+//         resources,
+//         lng: 'es',
+//         keySeparator: false, //sirve para utilizar objetos dentro de la sesión
+//         interpolation:{ // este es comando de interpolación, en el ejemplo no lo utiliza
+//             escapeValue: false
+//         }
+//     });
+
+// export default i18n;
