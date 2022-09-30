@@ -1,12 +1,12 @@
+/* eslint-disable no-sequences */
 import "./App.css";
-import { Button, ConfigProvider, Layout, Table } from "antd";
+import { Button, ConfigProvider, Table } from "antd";
 import React, { useState } from "react";
 import { Header } from "antd/lib/layout/layout";
 import { useTranslation } from "react-i18next"; // hook de i18n
 import esEs from "../node_modules/antd/es/locale/es_ES";
 import enUs from "../node_modules/antd/es/locale/en_US";
 import ptBr from "../node_modules/antd/es/locale/pt_BR";
-import { use } from "i18next";
 
 const columns = [
   {
@@ -98,6 +98,10 @@ const onChange = (pagination, filters, sorter, extra) => {
 function App() {
   const [t, i18n] = useTranslation(); // la t es el abreviado de translation, normalmente se usa asi
   const [locale, setLocale] = useState("esEs");
+
+  columns[0].title = t("table.name");
+  columns[1].title = t("table.age");
+  columns[2].title = t("table.address");
 
   return (
     <div>
