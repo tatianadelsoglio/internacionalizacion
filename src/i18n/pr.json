@@ -3,5 +3,13 @@
     "home.cambiar.idioma": "Mudar Idioma",
     "table.name": "Nome",
     "table.age": "Idade",
-    "table.address": "Endereço"
+    "table.address": "Endereço",
+    "list.item.description": "Ant Design, uma linguagem de design para aplicativos em segundo plano, é refinada pela equipe Ant UED",
+    "list.title1":"Título 1 do design da formiga",
+    "list.title2":"Título 2 do design da formiga",
+    "list.title3":"Título 3 do design da formiga",
+    "list.title4":"Título 4 do design da formiga",
+    "title.card":"Cartão de tamanho padrão",
+    "title.card.small":"Cartão de tamanho pequeno",
+    "p.card":"conteúdo do cartão"
 }

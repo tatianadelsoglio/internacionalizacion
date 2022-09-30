@@ -1,12 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-sequences */
 import "./App.css";
-import { Button, ConfigProvider, Table } from "antd";
+import { Avatar, Button, Card, ConfigProvider, List, Table } from "antd";
 import React, { useState } from "react";
 import { Header } from "antd/lib/layout/layout";
 import { useTranslation } from "react-i18next"; // hook de i18n
 import esEs from "../node_modules/antd/es/locale/es_ES";
 import enUs from "../node_modules/antd/es/locale/en_US";
 import ptBr from "../node_modules/antd/es/locale/pt_BR";
+
+//Tabla
 
 const columns = [
   {
@@ -95,13 +98,37 @@ const onChange = (pagination, filters, sorter, extra) => {
   console.log("params", pagination, filters, sorter, extra);
 };
 
+//Lista
+
+const dataLista = [
+  {
+    title: "Ant Design Title 1",
+  },
+  {
+    title: "Ant Design Title 2",
+  },
+  {
+    title: "Ant Design Title 3",
+  },
+  {
+    title: "Ant Design Title 4",
+  },
+];
+
 function App() {
   const [t, i18n] = useTranslation(); // la t es el abreviado de translation, normalmente se usa asi
   const [locale, setLocale] = useState("esEs");
 
+  //Modificacion de titulos de las columnas de la tabla, segun idioma
   columns[0].title = t("table.name");
   columns[1].title = t("table.age");
   columns[2].title = t("table.address");
+
+  //Modificacion de titulos de las columnas de la lista, segun idioma
+  dataLista[0].title = t("list.title1");
+  dataLista[1].title = t("list.title2");
+  dataLista[2].title = t("list.title3");
+  dataLista[3].title = t("list.title4");
 
   return (
     <div>
@@ -118,14 +145,59 @@ function App() {
             {/* esto representa la key para la transition, basicamente se pone esto para que segun el idioma cambie*/}
           </div>
           <div>
-            <Button onClick={() => (i18n.changeLanguage("es"), setLocale(esEs))}>ES</Button>
-            <Button onClick={() => (i18n.changeLanguage("en"), setLocale(enUs))}>EN</Button>
-            <Button onClick={() => (i18n.changeLanguage("pr"), setLocale(ptBr))}>PR</Button>
+            <Button
+              onClick={() => (i18n.changeLanguage("es"), setLocale(esEs))}
+            >
+              ES
+            </Button>
+            <Button
+              onClick={() => (i18n.changeLanguage("en"), setLocale(enUs))}
+            >
+              EN
+            </Button>
+            <Button
+              onClick={() => (i18n.changeLanguage("pr"), setLocale(ptBr))}
+            >
+              PR
+            </Button>
           </div>
         </div>
       </Header>
       <ConfigProvider locale={locale}>
         <Table columns={columns} dataSource={data} onChange={onChange} />
+          <br/>
+        <List
+          itemLayout="horizontal"
+          dataSource={dataLista}
+          renderItem={(item) => (
+            <List.Item>
+              <List.Item.Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title={<a href="https://ant.design">{item.title}</a>}
+                description={t("list.item.description")}
+              />
+            </List.Item>
+          )}
+        />
+        <br/>
+        <Card
+          title={t("title.card")}
+          style={{ width: 300 }}
+        >
+          <p>{t("p.card")}</p>
+          <p>{t("p.card")}</p>
+          <p>{t("p.card")}</p>
+
+        </Card>
+        <Card
+          size="small"
+          title={t("title.card.small")}
+          style={{ width: 300 }}
+        >
+          <p>{t("p.card")}</p>
+          <p>{t("p.card")}</p>
+          <p>{t("p.card")}</p>
+        </Card>
       </ConfigProvider>
     </div>
   );

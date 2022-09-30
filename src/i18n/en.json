@@ -3,5 +3,13 @@
     "home.cambiar.idioma": "Change language",
     "table.name": "Name",
     "table.age": "Age",
-    "table.address": "Address"
+    "table.address": "Address",
+    "list.item.description": "Ant Design, a design language for background applications, is refined by Ant UED Team",
+    "list.title1":"Ant Design Title 1",
+    "list.title2":"Ant Design Title 2",
+    "list.title3":"Ant Design Title 3",
+    "list.title4":"Ant Design Title 4",
+    "title.card":"Default size card",
+    "title.card.small":"Small size card",
+    "p.card":"card content"
 }

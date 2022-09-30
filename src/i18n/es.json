@@ -3,5 +3,13 @@
     "home.cambiar.idioma": "Cambiar Idioma",
     "table.name": "Nombre",
     "table.age": "Edad",
-    "table.address": "Dirección"
+    "table.address": "Dirección",
+    "list.item.description": "Ant Design, un lenguaje de diseño para aplicaciones en segundo plano, es perfeccionado por Ant UED Team",
+    "list.title1":"Título de diseño de hormiga 1",
+    "list.title2":"Título de diseño de hormiga 2",
+    "list.title3":"Título de diseño de hormiga 3",
+    "list.title4":"Título de diseño de hormiga 4",
+    "title.card":"Tarjeta de tamaño predeterminado",
+    "title.card.small":"tarjeta de tamaño pequeño",
+    "p.card":"contenido de la tarjeta"
 }
