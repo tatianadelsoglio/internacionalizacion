@@ -23,18 +23,20 @@ const resources = {
   pr: {
     translation: prTranslation,
   },
+  pt: {
+    translation: prTranslation,
+  }
 };
 
-const languages = ["en", "es", "pr"];
+const languages = ["en", "es", "pr", "pt"];
 
 i18next
   .use(XHR)
   .use(LanguageDetector)
   .init({
     detection: { order: ["path", "navigator"] },
-    fallbackLng: "en",
+    fallbackLng: (navigator.language),
     resources: resources,
-    lng: "es",
     whitelist: languages,
     keySeparator: false, //sirve para utilizar objetos dentro de la sesión
     interpolation: {
@@ -42,6 +44,8 @@ i18next
       escapeValue: false,
     },
   });
+
+  console.log(navigator.language);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
