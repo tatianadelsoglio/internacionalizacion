@@ -129,7 +129,6 @@ function App() {
   dataLista[1].title = t("list.title2");
   dataLista[2].title = t("list.title3");
   dataLista[3].title = t("list.title4");
-
   return (
     <div>
       <Header style={{ backgroundColor: "white" }}>
